@@ -1,0 +1,80 @@
+{
+  "name": "react-modern-lazy-load",
+  "version": "0.0.1",
+  "description": "Modern lazy loading for React",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/src/index.d.ts",
+  "homepage": "https://tomaskavka.github.io/react-modern-lazy-load",
+  "scripts": {
+    "test": "npx jest --detectOpenHandles",
+    "test:coverage": "npx jest --detectOpenHandles --collectCoverage",
+    "build": "npm run clean && node build.js && tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist",
+    "lint": "eslint ./",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/addon-storysource": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.6",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "babel-loader": "^8.2.5",
+    "esbuild": "^0.15.2",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.6.4",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "prettier": "2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "storybook": "^6.5.10",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "react-simple-use-intersection-observer": "^0.0.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomaskavka/react-modern-lazy-load.git"
+  },
+  "keywords": [
+    "react",
+    "lazy",
+    "loading",
+    "modern",
+    "lazy",
+    "image"
+  ],
+  "author": "Tomáš Kavka <iam@tomaskavka.cz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomaskavka/react-modern-lazy-load/issues",
+    "email": "iam@tomaskavka.cz"
+  }
+}
